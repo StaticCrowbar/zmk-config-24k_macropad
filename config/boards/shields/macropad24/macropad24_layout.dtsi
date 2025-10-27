@@ -1,0 +1,15 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    macropad24_layout: macropad24_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+    };
+};
+
+&zmk_physical_layouts {
+    default = <&macropad24_layout>;
+};
