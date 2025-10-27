@@ -36,11 +36,11 @@
             ;
 
         col-gpios
-            = <&gpio1 6 GPIO_ACTIVE_HIGH>  // Col 0 - P1.11
-            , <&gpio1 4 GPIO_ACTIVE_HIGH>  // Col 1 - P1.10
-            , <&gpio0 11 GPIO_ACTIVE_HIGH>  // Col 2 - P1.13
+            = <&gpio0 24 GPIO_ACTIVE_HIGH>   // Col 4 - P0.02
             , <&gpio1 0 GPIO_ACTIVE_HIGH>  // Col 3 - P1.15
-            , <&gpio0 24 GPIO_ACTIVE_HIGH>   // Col 4 - P0.02
+            , <&gpio0 11 GPIO_ACTIVE_HIGH>  // Col 2 - P1.13
+            , <&gpio1 4 GPIO_ACTIVE_HIGH>  // Col 1 - P1.10
+            , <&gpio1 6 GPIO_ACTIVE_HIGH>  // Col 0 - P1.11
             ;
     };
 
