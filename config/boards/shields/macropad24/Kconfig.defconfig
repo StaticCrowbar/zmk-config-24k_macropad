@@ -1,0 +1,6 @@
+if SHIELD_MACROPAD24
+
+config ZMK_KEYBOARD_NAME
+	default "Macropad24"
+	
+endif
