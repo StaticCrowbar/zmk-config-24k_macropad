@@ -8,10 +8,10 @@
 
         default_layer {
             label = "Default";
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp K_VOL_UP K_VOL_DN>;
             bindings = <
-                &kp A    &kp G         &kp C_MUTE
-                &kp B    &kp NUM_NLCK  &kp SLASH    &kp ASTRK   &kp MINUS
+                &kp A    &kp G         &kp K_MUTE
+                &kp B    &kp KP_NLCK   &kp SLASH    &kp ASTRK   &kp MINUS
                 &kp C    &kp N7        &kp N8       &kp N9
                 &kp D    &kp N4        &kp N5       &kp N6      &kp PLUS
                 &kp E    &kp N1        &kp N2       &kp N3
