@@ -8,14 +8,14 @@
 
         default_layer {
             label = "Default";
-            sensor-bindings = <&inc_dec_kp 9 1>;
+            sensor-bindings = <&inc_dec_kp KP_N9 KP_N1>;
             bindings = <
                 &kp A    &kp B         &kp C           &none             &kp E
                 &kp Z    &kp KP_NLCK   &kp KP_DIVIDE   &kp KP_ASTERISK   &kp KP_MINUS
                 &kp Y    &kp KP_N7     &kp KP_N8       &kp KP_N9         &none
                 &kp X    &kp KP_N4     &kp KP_N5       &kp KP_N6         &kp KP_PLUS
                 &kp W    &kp KP_N1     &kp KP_N2       &kp KP_N3         &none
-                &kp V    &none         &kp KP_N0       &kp DOT           &kp KP_ENTER
+                &kp V    &none         &kp KP_N0       &kp kp_DOT        &kp KP_ENTER
             >;
         };
 
