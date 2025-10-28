@@ -29,27 +29,27 @@
         row-gpios
             = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Pin P0.02
             , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.15
-            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P
-            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P
-            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P
-            , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Pin P
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.13
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.11
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P0.10
+            , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Pin P0.09
             ;
 
         col-gpios
-            = <&gpio0 24 GPIO_ACTIVE_HIGH>
-            , <&gpio1 00 GPIO_ACTIVE_HIGH>
-            , <&gpio0 11 GPIO_ACTIVE_HIGH>
-            , <&gpio1 4 GPIO_ACTIVE_HIGH>
-            , <&gpio1 6 GPIO_ACTIVE_HIGH>
+            = <&gpio0 24 GPIO_ACTIVE_HIGH> // Pin P0.24
+            , <&gpio1 00 GPIO_ACTIVE_HIGH> // Pin P1.00
+            , <&gpio0 11 GPIO_ACTIVE_HIGH> // Pin P0.11
+            , <&gpio1 4 GPIO_ACTIVE_HIGH>  // Pin P1.04
+            , <&gpio1 6 GPIO_ACTIVE_HIGH>  // Pin P1.06
             ;
     };
 
     encoder: encoder {
         compatible = "alps,ec11";
         label = "ENCODER";
-        a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        b-gpios = <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>;
-        steps = <20>;
+        a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Pin 0.17
+        b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Pin 0.20
+        resolution = <20>;
         status = "okay";
     };
 
