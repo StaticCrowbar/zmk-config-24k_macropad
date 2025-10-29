@@ -8,7 +8,7 @@
 
         default_layer {
             label = "Default";
-            sensor-bindings = <&inc_dec_kp KP_N9 KP_N1>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
             bindings = <
                 &kp A    &kp B         &kp C           &none             &kp E
                 &kp Z    &kp KP_NLCK   &kp KP_DIVIDE   &kp KP_ASTERISK   &kp KP_MINUS
