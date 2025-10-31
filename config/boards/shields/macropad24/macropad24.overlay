@@ -27,31 +27,30 @@
         diode-direction = "col2row";
 
         row-gpios
-            = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Pin P0.02
-            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.15
-            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.13
-            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.11
-            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P0.10
-            , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Pin P0.09
+            = <&pro_micro_d 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Pin P0.02 / D19
+            , <&pro_micro_d 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.15 / D18
+            , <&pro_micro_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.13 / D15
+            , <&pro_micro_d 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.11 / D14
+            , <&pro_micro_d 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P0.10 / D16
+            , <&pro_micro_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Pin P0.09 / D10
             ;
 
         col-gpios
-            = <&gpio0 24 GPIO_ACTIVE_HIGH> // Pin P0.24
-            , <&gpio1 00 GPIO_ACTIVE_HIGH> // Pin P1.00
-            , <&gpio0 11 GPIO_ACTIVE_HIGH> // Pin P0.11
-            , <&gpio1 4 GPIO_ACTIVE_HIGH>  // Pin P1.04
-            , <&gpio1 6 GPIO_ACTIVE_HIGH>  // Pin P1.06
+            = <&pro_micro_d 5 GPIO_ACTIVE_HIGH> // Pin P0.24 / D5
+            , <&pro_micro_d 6 GPIO_ACTIVE_HIGH> // Pin P1.00 / D6
+            , <&pro_micro_d 7 GPIO_ACTIVE_HIGH> // Pin P0.11 / D7
+            , <&pro_micro_d 8 GPIO_ACTIVE_HIGH>  // Pin P1.04 / D8
+            , <&pro_micro_d 9 GPIO_ACTIVE_HIGH>  // Pin P1.06 / D9
             ;
     };
 
     encoder: encoder {
         compatible = "alps,ec11";
         label = "ENCODER";
-        a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Pin 0.17
-        b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Pin 0.20
-        //resolution = <1>;
-		steps = <20>;
-        status = "okay";
+        a-gpios = <&pro_micro_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Pin 0.17 / D2
+        b-gpios = <&pro_micro_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Pin 0.20 / D3
+        resolution = <4>;
+		status = "okay";
     };
 
     sensors {
