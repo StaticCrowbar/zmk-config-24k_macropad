@@ -39,8 +39,8 @@
             = <&pro_micro_d 5 GPIO_ACTIVE_HIGH> // Pin P0.24 / D5
             , <&pro_micro_d 6 GPIO_ACTIVE_HIGH> // Pin P1.00 / D6
             , <&pro_micro_d 7 GPIO_ACTIVE_HIGH> // Pin P0.11 / D7
-            , <&pro_micro_d 8 GPIO_ACTIVE_HIGH>  // Pin P1.04 / D8
-            , <&pro_micro_d 9 GPIO_ACTIVE_HIGH>  // Pin P1.06 / D9
+            , <&pro_micro_d 8 GPIO_ACTIVE_HIGH> // Pin P1.04 / D8
+            , <&pro_micro_d 9 GPIO_ACTIVE_HIGH> // Pin P1.06 / D9
             ;
     };
 
@@ -50,7 +50,7 @@
         a-gpios = <&pro_micro_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Pin 0.17 / D2
         b-gpios = <&pro_micro_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // Pin 0.20 / D3
         resolution = <4>;
-		status = "okay";
+		status = "disabled";
     };
 
     sensors {
