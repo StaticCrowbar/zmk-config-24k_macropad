@@ -19,14 +19,14 @@
                 &kp Y    		&kp KP_N7     	&kp KP_N8       &kp KP_N9
                 &kp X    		&kp KP_N4     	&kp KP_N5       &kp KP_N6			&kp KP_PLUS
                 &kp W    		&kp KP_N1		&kp KP_N2       &kp KP_N3
-                &mo Function					&kp KP_N0       &kp KP_DOT			&kp KP_ENTER
+                &mo FN						&kp KP_N0       &kp KP_DOT			&kp KP_ENTER
             >;
 			
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>;
         };
 
         function_layer {
-            label = "Function";
+            label = "FN";
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
             bindings = <
 								&trans     	&trans       &trans   	&trans
