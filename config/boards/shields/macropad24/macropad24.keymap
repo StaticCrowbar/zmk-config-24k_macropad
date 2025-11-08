@@ -17,12 +17,12 @@
             label = "Default";
             
             bindings = <
-								&kp B         	&bootloader        		          &kp E
+				&none			&kp B         	&bootloader     &none	          &kp E
                 &bt BT_SEL 0  	&kp KP_NLCK  	&kp KP_DIVIDE   &kp KP_ASTERISK   &kp KP_MINUS
-                &kp Y    		&kp KP_N7     	&kp KP_N8       &kp KP_N9
+                &kp Y    		&kp KP_N7     	&kp KP_N8       &kp KP_N9		  &none
                 &kp X    		&kp KP_N4     	&kp KP_N5       &kp KP_N6         &kp KP_PLUS
-                &kp W    		&kp KP_N1		&kp KP_N2       &kp KP_N3 
-                &to FN							&kp KP_N0       &kp KP_DOT        &kp KP_ENTER
+                &kp W    		&kp KP_N1		&kp KP_N2       &kp KP_N3 		  &none
+                &to FN			&none			&kp KP_N0       &kp KP_DOT        &kp KP_ENTER
             >;
 			
 			sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
@@ -32,13 +32,13 @@
             label = "Function";
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
             bindings = <
-								&trans     	&trans       &trans   	&trans
+				&none			&trans     	&trans       &trans   	&trans
                 &bt BT_SEL 0  	&trans     	&trans       &trans   	&trans
-                &bt BT_SEL 1  	&trans     	&trans       &trans
+                &bt BT_SEL 1  	&trans     	&trans       &trans		&none
                 &bt BT_CLR    	&trans     	&trans       &trans   	&trans
-                &bootloader    	&trans     	&trans       &trans
-                &to DEFAULT					&trans       &trans		&trans
-			>;
+                &bootloader    	&trans     	&trans       &trans		&none
+                &to DEFAULT		&none		&trans       &trans		&trans
+			>
         };
     };
 };
