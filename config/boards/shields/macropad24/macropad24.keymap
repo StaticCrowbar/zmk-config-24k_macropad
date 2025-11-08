@@ -38,7 +38,7 @@
 				&bt BT_CLR		&trans		&trans		&trans		&trans
 				&bootloader		&trans		&trans		&trans		&none
 				&to DEFAULT		&none		&trans		&trans		&trans
-			>
+			>;
         };
     };
 };
