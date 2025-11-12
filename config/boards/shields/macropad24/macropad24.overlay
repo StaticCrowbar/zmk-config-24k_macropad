@@ -47,8 +47,8 @@
     encoder: encoder {
         compatible = "alps,ec11";
         label = "ENCODER";
-        a-gpios = <&pro_micro_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>; // Pin 0.17 / D2
-        b-gpios = <&pro_micro_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>; // Pin 0.20 / D3
+        a-gpios = <&pro_micro_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Pin 0.17 / D2
+        b-gpios = <&pro_micro_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Pin 0.20 / D3
         resolution = <4>;
     };
 
