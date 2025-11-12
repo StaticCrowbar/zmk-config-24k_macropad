@@ -17,7 +17,7 @@
             label = "Default";
             
             bindings = <
-				&none			&kp B         	&bootloader     &none	          &kp E
+				&none			&kp B         	&C			     &none	          &kp E
                 &bt BT_SEL 0  	&kp KP_NLCK  	&kp KP_DIVIDE   &kp KP_ASTERISK   &kp KP_MINUS
                 &kp Y    		&kp KP_N7     	&kp KP_N8       &kp KP_N9		  &none
                 &kp X    		&kp KP_N4     	&kp KP_N5       &kp KP_N6         &kp KP_PLUS
@@ -25,12 +25,12 @@
                 &to FN			&none			&kp KP_N0       &kp KP_DOT        &kp KP_ENTER
             >;
 			
-			sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
+			sensor-bindings = <&inc_dec_kp A B>;
         };
 
         function_layer {
             label = "Function";
-            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
+            sensor-bindings = <&inc_dec_kp A B>;
             bindings = <
 				&none			&trans     	&trans		&trans		&trans
 				&bt BT_SEL 0	&trans		&trans		&trans		&trans
