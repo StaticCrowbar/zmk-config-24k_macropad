@@ -27,12 +27,12 @@
         diode-direction = "col2row";
 
         row-gpios
-            = <&pro_micro_d 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Pin P0.02 / D19
+            = <&pro_micro_d 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P0.02 / D19
             , <&pro_micro_d 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.15 / D18
             , <&pro_micro_d 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.13 / D15
             , <&pro_micro_d 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P1.11 / D14
             , <&pro_micro_d 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P0.10 / D16
-            , <&pro_micro_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Pin P0.09 / D10
+            , <&pro_micro_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Pin P0.09 / D10
             ;
 
         col-gpios
@@ -42,19 +42,25 @@
             , <&pro_micro_d 8 GPIO_ACTIVE_HIGH> // Pin P1.04 / D8
             , <&pro_micro_d 9 GPIO_ACTIVE_HIGH> // Pin P1.06 / D9
             ;
+			
     };
-
-    encoder: encoder {
-        compatible = "alps,ec11";
-        label = "ENCODER";
-        a-gpios = <&pro_micro_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Pin 0.17 / D2
-        b-gpios = <&pro_micro_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Pin 0.20 / D3
-        resolution = <4>;
-    };
-
-    sensors {
+	
+	sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder>;
         //triggers-per-rotation = <5>;
     };
+};
+
+&pro_micro_i2c {
+    status = "disabled";
+};
+
+encoder: encoder {
+	compatible = "alps,ec11";
+	label = "ENCODER";
+	a-gpios = <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; //<&pro_micro_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Pin 0.17 / D2
+	b-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; //<&pro_micro_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>; // Pin 0.20 / D3
+	resolution = <4>;
+	status = "okay";
 };
